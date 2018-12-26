@@ -17,9 +17,9 @@ sparkVersion := sparkVer
 
 scalaVersion := scalaVer
 
-name := "spark-deep-learning"
+name := "dummy-test-package"
 
-spName := "databricks/spark-deep-learning"
+spName := "MrBago/dummy-test-package"
 
 organization := "com.databricks"
 
@@ -113,3 +113,5 @@ releaseProcess := Seq[ReleaseStep](
 test in assembly := {}
 
 assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
+
+credentials += Credentials(Path.userHome / ".spark-packages-credential")

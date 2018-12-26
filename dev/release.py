@@ -5,7 +5,7 @@ from six.moves import input
 from subprocess import check_call, check_output
 import sys
 
-DATABRICKS_REMOTE = "git@github.com:databricks/spark-deep-learning.git"
+DATABRICKS_REMOTE = "git@github.com:MrBago/dummy-test-package.git"
 PUBLISH_MODES = {
     "local": "publishLocal",
     "m2": "publishM2",

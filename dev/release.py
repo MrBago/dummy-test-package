@@ -105,8 +105,8 @@ def main(release_version, next_version, publish_to, no_prompt, git_remote, publi
     check_call(["git", "checkout", release_tag])
 
     publish_target = PUBLISH_MODES[publish_to]
-    for version in spark_version:
-        check_call(["./build/sbt", "-Dspark.version=%s" % version, "clean", publish_target])
+    # for version in spark_version:
+    check_call(["./build/sbt", "clean", publish_target])
 
     prominentPrint("Updating local branch: %s" % current_branch)
     check_call(["git", "checkout", current_branch])

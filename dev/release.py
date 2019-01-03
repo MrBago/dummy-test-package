@@ -103,6 +103,7 @@ def main(release_version, next_version, publish_to, no_prompt, git_remote, publi
 
     prominentPrint("Building and testing with sbt.")
     check_call(["git", "checkout", release_tag])
+    check_call(["git", "push", git_remote, release_tag])
 
     publish_target = PUBLISH_MODES[publish_to]
     for version in spark_version:
@@ -117,7 +118,6 @@ def main(release_version, next_version, publish_to, no_prompt, git_remote, publi
     if verify("Would you like to push local branch & version tag to remote: %s? (y/n)" % git_remote,
               interactive):
         check_call(["git", "push", git_remote, current_branch])
-        check_call(["git", "push", git_remote, release_tag])
 
     prominentPrint("Building release docs")
 

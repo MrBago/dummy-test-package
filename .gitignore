@@ -3,6 +3,7 @@
 *.class
 *.log
 *.pyc
+*.swp
 python/.setup.sh
 build/*.jar
 
